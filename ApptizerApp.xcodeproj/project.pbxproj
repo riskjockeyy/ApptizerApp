@@ -14,6 +14,12 @@
 		4F57E8AA2752C39F00134135 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F57E8A92752C39F00134135 /* HomeView.swift */; };
 		4F57E8AC2752C3A700134135 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F57E8AB2752C3A700134135 /* OrderView.swift */; };
 		4F57E8AE2752C3AE00134135 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F57E8AD2752C3AE00134135 /* ListView.swift */; };
+		4F57E8B32752C8CC00134135 /* Apptizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F57E8B22752C8CC00134135 /* Apptizer.swift */; };
+		4F57E8B52752CA1C00134135 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F57E8B42752CA1C00134135 /* ContentModel.swift */; };
+		4F57E8B92752CC9100134135 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F57E8B82752CC9100134135 /* Constant.swift */; };
+		4F57E8BB2752EC5A00134135 /* ApptizerName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F57E8BA2752EC5900134135 /* ApptizerName.swift */; };
+		4F57E8BD2752ECE800134135 /* ApptizerBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F57E8BC2752ECE800134135 /* ApptizerBusiness.swift */; };
+		4F57E8BF2753050700134135 /* ApptizerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F57E8BE2753050700134135 /* ApptizerCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +31,12 @@
 		4F57E8A92752C39F00134135 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4F57E8AB2752C3A700134135 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		4F57E8AD2752C3AE00134135 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		4F57E8B22752C8CC00134135 /* Apptizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apptizer.swift; sourceTree = "<group>"; };
+		4F57E8B42752CA1C00134135 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
+		4F57E8B82752CC9100134135 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		4F57E8BA2752EC5900134135 /* ApptizerName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptizerName.swift; sourceTree = "<group>"; };
+		4F57E8BC2752ECE800134135 /* ApptizerBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptizerBusiness.swift; sourceTree = "<group>"; };
+		4F57E8BE2753050700134135 /* ApptizerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptizerCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +70,10 @@
 			isa = PBXGroup;
 			children = (
 				4F57E89A2752C2CA00134135 /* ApptizerApp.swift */,
-				4F57E89C2752C2CA00134135 /* ApptizerTabView.swift */,
-				4F57E8AD2752C3AE00134135 /* ListView.swift */,
-				4F57E8A92752C39F00134135 /* HomeView.swift */,
-				4F57E8AB2752C3A700134135 /* OrderView.swift */,
+				4F57E8AF2752C88600134135 /* View */,
+				4F57E8B12752C88E00134135 /* Model */,
+				4F57E8B02752C88A00134135 /* ViewMode */,
+				4F57E8B72752CC8300134135 /* Constant */,
 				4F57E89E2752C2CC00134135 /* Assets.xcassets */,
 				4F57E8A02752C2CC00134135 /* Preview Content */,
 			);
@@ -74,6 +86,44 @@
 				4F57E8A12752C2CC00134135 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4F57E8AF2752C88600134135 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4F57E89C2752C2CA00134135 /* ApptizerTabView.swift */,
+				4F57E8AD2752C3AE00134135 /* ListView.swift */,
+				4F57E8A92752C39F00134135 /* HomeView.swift */,
+				4F57E8AB2752C3A700134135 /* OrderView.swift */,
+				4F57E8BA2752EC5900134135 /* ApptizerName.swift */,
+				4F57E8BC2752ECE800134135 /* ApptizerBusiness.swift */,
+				4F57E8BE2753050700134135 /* ApptizerCardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4F57E8B02752C88A00134135 /* ViewMode */ = {
+			isa = PBXGroup;
+			children = (
+				4F57E8B42752CA1C00134135 /* ContentModel.swift */,
+			);
+			path = ViewMode;
+			sourceTree = "<group>";
+		};
+		4F57E8B12752C88E00134135 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4F57E8B22752C8CC00134135 /* Apptizer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4F57E8B72752CC8300134135 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				4F57E8B82752CC9100134135 /* Constant.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,8 +198,14 @@
 			files = (
 				4F57E8AA2752C39F00134135 /* HomeView.swift in Sources */,
 				4F57E8AC2752C3A700134135 /* OrderView.swift in Sources */,
+				4F57E8B32752C8CC00134135 /* Apptizer.swift in Sources */,
+				4F57E8BB2752EC5A00134135 /* ApptizerName.swift in Sources */,
+				4F57E8B92752CC9100134135 /* Constant.swift in Sources */,
+				4F57E8BF2753050700134135 /* ApptizerCardView.swift in Sources */,
 				4F57E8AE2752C3AE00134135 /* ListView.swift in Sources */,
+				4F57E8BD2752ECE800134135 /* ApptizerBusiness.swift in Sources */,
 				4F57E89D2752C2CA00134135 /* ApptizerTabView.swift in Sources */,
+				4F57E8B52752CA1C00134135 /* ContentModel.swift in Sources */,
 				4F57E89B2752C2CA00134135 /* ApptizerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,6 +12,7 @@ struct ApptizerApp: App {
     var body: some Scene {
         WindowGroup {
             ApptizerTabView()
+                .environmentObject(ContentModel())
         }
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ListView.swift
+//  OrderView.swift
 //  ApptizerApp
 //
 //  Created by Bharat Singh on 28/11/21.
@@ -7,14 +7,13 @@
 
 import SwiftUI
 
-struct ListView: View {
+struct OrderView: View {
     var body: some View {
-        Text("List View")
-    }
+      Text("Order view")
 }
-
-struct ListView_Previews: PreviewProvider {
+}
+struct OrderView_Previews:PreviewProvider {
     static var previews: some View {
-        ListView()
+        OrderView()
     }
 }

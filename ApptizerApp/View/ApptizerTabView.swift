@@ -8,16 +8,20 @@
 import SwiftUI
 
 struct ApptizerTabView: View {
+    @EnvironmentObject var model : ContentModel
+   // @State var selectedIndex = 1
     var body: some View {
         
-        TabView {
+        TabView() {
             HomeView()
                 .tabItem {
                     VStack {
                         Image(systemName: "house")
+                            
                         Text("Home")
                     }
                 }
+                
             
             ListView()
                 .tabItem {
@@ -26,6 +30,7 @@ struct ApptizerTabView: View {
                         Text("List")
                     }
                 }
+                
             OrderView()
                 .tabItem {
                     VStack {
@@ -33,13 +38,9 @@ struct ApptizerTabView: View {
                         Text("order")
                     }
                 }
+               
         }
         
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ApptizerTabView()
-    }
-}
