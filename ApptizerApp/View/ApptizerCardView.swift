@@ -11,57 +11,74 @@ struct ApptizerCardView: View {
     var apptizer: Apptizer
     var body: some View {
         
-        VStack {
-            
-        
-        let uiImage = UIImage(data: apptizer.imageData ?? Data())
-        
-            Image(uiImage: uiImage ?? UIImage())
-                .resizable()
-                .frame(width: 300, height: 300)
-                .scaledToFit()
-            
-            Text(apptizer.name)
-                .bold()
-                .padding()
-            
-            Text(apptizer.description)
-                .multilineTextAlignment(.center)
-                .padding()
-            
-            Group {
-                HStack {
-                    VStack {
-                        Text("Calories")
-                        Text(String(apptizer.calories))
-                    }.padding()
-                    VStack {
-                        Text("Carbs")
-                        Text(String("\(apptizer.carbs) g"))
-                    }
-                    .padding()
-                    VStack {
-                        Text("Protein")
-                        Text(String("\(apptizer.protein) g"))
-                    }
-                    .padding()
-                }
-                .padding(.horizontal)
-                
+    
+            GeometryReader { geo in
                 ZStack {
-                    Rectangle()
-                        .foregroundColor(.green)
-                        .frame(height: 48)
-                        .cornerRadius(5)
-                    
-                    Text(String(format: "$ %.2f - Add To Order", (apptizer.price)))
+                Rectangle()
                         .foregroundColor(.white)
                         
-                }
-                .padding(.horizontal)
+            VStack {
+                
+            
+            let uiImage = UIImage(data: apptizer.imageData ?? Data())
+            
+                Image(uiImage: uiImage ?? UIImage())
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .clipped()
+                
+                Text(apptizer.name)
+                    .bold()
+                    .padding(10)
+                
+                Text(apptizer.description)
+                    .multilineTextAlignment(.center)
+                    .padding(10)
+                
+                
+                    HStack {
+                        VStack {
+                            Text("Calories")
+                            Text(String(apptizer.calories))
+                        }.padding(8)
+                        VStack {
+                            Text("Carbs")
+                            Text(String("\(apptizer.carbs) g"))
+                        }
+                        .padding(8)
+                        VStack {
+                            Text("Protein")
+                            Text(String("\(apptizer.protein) g"))
+                        }
+                        .padding(8)
+                    }
+                    .padding(.horizontal)
+                    
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(.green)
+                            .frame(height: 48)
+                            .cornerRadius(10)
+                        
+                        Text(String(format: "$ %.2f - Add To Order", (apptizer.price)))
+                            .foregroundColor(.white)
+                            
+                    }
+                    .padding([.horizontal, .bottom], 15)
+                
+            
             }
-        
+                    
+            }
+                .padding(.leading, 30)
+                .frame(width: geo.size.width - 40, height: geo.size.height - 100, alignment: .center)
+                     .cornerRadius(15)
+                     .shadow(color: Color(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.5), radius: 10, x: -5, y: 5)
         }
+        
+        
+        
+        
     }
 }
 
