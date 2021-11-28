@@ -19,7 +19,14 @@ struct ApptizerName: View {
                             
                             ForEach(apptizer) { apptizer in
                                 VStack {
-                                    ApptizerBusiness(apptizer: apptizer)
+                                    NavigationLink {
+                                        ApptizerCardView(apptizer: apptizer)
+                                    } label: {
+                                        ApptizerBusiness(apptizer: apptizer)
+                                    }
+                                    .accentColor(.black)
+
+                                    
                                 }
                             }
                     }
